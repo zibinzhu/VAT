@@ -1,0 +1,1 @@
+CUDA_VISIBLE_DEVICES=6 python ./tools/test_pifu.py  --config ./configs/PIFuhd_Render_People_HG_coarse.py

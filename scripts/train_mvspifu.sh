@@ -1,0 +1,1 @@
+CUDA_VISIBLE_DEVICES=0,1,2,3 python -m torch.distributed.launch  --master_port 88854 --nproc_per_node=4 ./tools/train_pifu.py --dist --current 0 --config ./configs/SRPIFu_UNet_THuman.py

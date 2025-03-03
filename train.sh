@@ -1,0 +1,1 @@
+python -m train.py --current 14 --config ./configs/MHPIFu_UNet_THuman.py --resume

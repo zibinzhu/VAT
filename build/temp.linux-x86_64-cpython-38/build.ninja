@@ -1,0 +1,20 @@
+ninja_required_version = 1.3
+cxx = c++
+
+cflags = -pthread -B /data/zhuzibin/Anaconda/envs/pifu/compiler_compat -Wno-unused-result -Wsign-compare -DNDEBUG -fwrapv -O2 -Wall -fPIC -O2 -isystem /data/zhuzibin/Anaconda/envs/pifu/include -fPIC -O2 -isystem /data/zhuzibin/Anaconda/envs/pifu/include -fPIC -I/data/zhuzibin/Anaconda/envs/pifu/lib/python3.8/site-packages/numpy/core/include -I/data/zhuzibin/Anaconda/envs/pifu/include/python3.8 -c
+post_cflags = -DTORCH_API_INCLUDE_EXTENSION_H -DTORCH_EXTENSION_NAME=triangle_hash -D_GLIBCXX_USE_CXX11_ABI=0 -std=c++14
+ldflags = 
+
+rule compile
+  command = $cxx -MMD -MF $out.d $cflags -c $in -o $out $post_cflags
+  depfile = $out.d
+  deps = gcc
+
+
+
+build /data/zhuzibin/Workspace/Python/Code/SRPIFu/build/temp.linux-x86_64-cpython-38/engineer/utils/libmesh/triangle_hash.o: compile /data/zhuzibin/Workspace/Python/Code/SRPIFu/engineer/utils/libmesh/triangle_hash.cpp
+
+
+
+
+

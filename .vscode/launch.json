@@ -1,0 +1,17 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python: Train Script",
+            "type": "python",
+            "request": "launch",
+            "module": "train",
+            "args": [
+                "--current", "0",
+                "--config", "./configs/MHPIFu_UNet_THuman.py"
+            ],
+            "justMyCode": true,
+            "console": "integratedTerminal"
+        }
+    ]
+}
